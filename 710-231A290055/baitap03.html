@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài 3 - Countdown 10 phút</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="bt3">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">710-231A290055</a>
+            <nav class="nav">
+                <a href="baitap01.html">Bài 1</a>
+                <a href="baitap02.html">Bài 2</a>
+                <a class="active" href="baitap03.html">Bài 3</a>
+                <a href="baitap14.html">Bài 14</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h1>Bài 3: Countdown Timer 10 phút</h1>
+            <p class="muted">
+                Logic tư duy: dùng <b>setInterval</b> cập nhật mỗi 1s. Khi reset/thoát trang phải <b>clearInterval</b> để tránh memory leak.
+                Deploy hosting: đồng hồ chạy theo client; muốn đồng bộ server thì lấy thời gian từ API/server.
+            </p>
+
+            <div class="timer-box">
+                <div id="timer" class="timer" aria-live="polite">10:00</div>
+                <div class="btn-row">
+                    <button id="startBtn" class="btn" type="button">Start</button>
+                    <button id="pauseBtn" class="btn btn-outline" type="button">Pause</button>
+                    <button id="resetBtn" class="btn btn-outline" type="button">Reset</button>
+                </div>
+                <p id="bt3Msg" class="msg"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" hidden>
+        <div class="modal-content card">
+            <h2>Hết giờ!</h2>
+            <p class="muted">Countdown đã về 00:00.</p>
+            <button id="closeModal" class="btn" type="button">OK</button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container muted">Bài 3 - 710-231A290055</div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài 1 - Danh sách sản phẩm + Tìm kiếm</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="bt1">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">710-231A290055</a>
+            <nav class="nav">
+                <a class="active" href="baitap01.html">Bài 1</a>
+                <a href="baitap02.html">Bài 2</a>
+                <a href="baitap03.html">Bài 3</a>
+                <a href="baitap14.html">Bài 14</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h1>Bài 1: Danh sách sản phẩm + Tìm kiếm</h1>
+            <p class="muted">
+                Logic tư duy: lấy input người dùng → <b>trim</b>, chuyển về <b>lowercase</b>, tìm theo <b>includes</b>.
+                Tránh injection: render bằng <b>textContent</b> (không nhét HTML trực tiếp).
+            </p>
+
+            <div class="search-row">
+                <label class="field">
+                    <span>Tên sản phẩm</span>
+                    <input id="searchInput" type="text" placeholder="VD: tai nghe, đèn..." autocomplete="off" />
+                </label>
+                <button id="searchBtn" class="btn" type="button">Tìm</button>
+                <button id="clearBtn" class="btn btn-outline" type="button">Xóa</button>
+            </div>
+
+            <p id="bt1Msg" class="msg"></p>
+
+            <section class="products" id="productGrid" aria-label="Danh sách sản phẩm">
+                <!-- render by JS -->
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container muted">Bài 1 - 710-231A290055</div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
